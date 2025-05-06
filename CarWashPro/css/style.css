@@ -252,3 +252,17 @@ h3 {
     object-fit: contain;
 }
 
+
+
+/*ANIMACIONES*/
+#imagen-animada {
+    --animate-duration: 2.5s;
+}
+
+.animar-texto {
+    --animate-duration: 2.5s;
+}
+.letras-animadas {
+    --animate-duration: 2.3s;
+    --animate-delay: 0.5s;
+}
