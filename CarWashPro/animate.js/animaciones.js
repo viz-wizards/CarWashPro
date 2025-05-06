@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          imagen.classList.add("animate__zoomIn"); // Activar animación
+          imagen.classList.add("animate__zoomIn"); 
           observer.unobserve(imagen); // Solo se ejecuta una vez
         }
       });
     }, {
-      threshold: 0.5 // 50% visible para activar animación
+      threshold: 0.5 
     });
   
     observer.observe(imagen);
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate__fadeInUp"); // o la animación que quieras
+        entry.target.classList.add("animate__fadeInUp"); 
         observer.unobserve(entry.target); // Solo se anima una vez
       }
     });
