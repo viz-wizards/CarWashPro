@@ -1,0 +1,63 @@
+/* Estilo para el contenido principal */
+
+
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background: #1e293b;
+    /* Tonos más modernos */
+    color: white;
+    height: 100vh;
+    padding: 25px;
+    box-sizing: border-box;
+    position: fixed;
+    /* Fija la barra al hacer scroll */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    color: #f8fafc;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 25px 0;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar li:hover {
+    background: #334155;
+    /* Efecto hover suave */
+}
+
+.sidebar a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.main-content {
+    margin-left: 280px;
+    /* Ajuste por la barra fija */
+    padding: 30px;
+    width: 100%;
+    background: #f9fafb;
+}
