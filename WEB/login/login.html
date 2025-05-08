@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CarWash SuperCar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="controladores/ControllerUser.php">
+            <h1>Bienvenido</h1>
+            <h2 id="is">Iniciar secion</h2>
+            <div class="input-box">
+                <input type="text" name="usuario" placeholder="Usuario" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="Contraseña" name="contraseña" placeholder="Contraseña" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <div class="remember-forgot">
+                
+                <a href="">olvidade mi contraseña </a>
+           </div>
+
+           <button type="submit" class="btn"> Iniciar Secion </button>
+
+          
+           </div>
+        </form>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita el envío normal del formulario
+        
+            const formData = new FormData(this);
+        
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.text())
+            .then(data => {
+                alert(data); // Mostrar respuesta del servidor
+                if (data.includes('Bienvenido')) {
+                    window.location.href = 'index.html'; // Redirige si el login es correcto
+                }
+            })
+            .catch(err => {
+                console.error('Error en la conexión:', err);
+                alert('Error de conexión al servidor.');
+            });
+        });
+        </script>
+        
+        
+</body>
+
+</html>
