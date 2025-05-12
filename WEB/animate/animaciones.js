@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          imagen.classList.add("animate__zoomIn"); 
+          imagen.classList.add("animate__backInLeft"); 
           observer.unobserve(imagen); // Solo se ejecuta una vez
         }
       });
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("animate__fadeInUp"); 
+        entry.target.classList.add("animate__backInLeft"); 
         observer.unobserve(entry.target); // Solo se anima una vez
       }
     });
