@@ -1,6 +1,6 @@
 <?php
 //requerir la clase model/usuario.php
-require_once '../Modelos/usuario.php';
+require_once '../models/Usuario.php';
 //Creamos un objeto (obj)
 $obj = new Usuario();
 //Llamos al metodo del OBJETO CREADO

@@ -13,3 +13,4 @@ class Usuario{
         return $cn->getEjecutionQuery($sql); //Obtenemos los datos de la ejecucion
     }
 }
+
