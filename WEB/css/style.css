@@ -337,3 +337,82 @@ body {
   height: 100px;
   width: 250px;       /*para cambiar ancho*/
 }
+
+
+
+/*============= SECCION FOOTER 2 =========================*/
+.footer {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  width: 220px;
+  height: auto;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  gap: 40px;
+}
+
+.footer-column {
+  min-width: 180px;
+}
+
+.footer-column h4 {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-payment {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-payment p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-icons img {
+  width: 50px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+}
