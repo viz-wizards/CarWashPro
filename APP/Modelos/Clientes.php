@@ -1,6 +1,6 @@
 <?php
 //Llamamos a la conexion
-require_once("conexion.php");
+require_once("Conexion.php");
 //Creamos una clase llamada CLIENTES
 class Clientes{
     //Creamos la funcion de registrar clientes

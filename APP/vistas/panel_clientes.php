@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-lg-12">
             <!--  INICIO DE FORMULARIO -->
-                <form action="../controllers/ClienteController.php" method="post"> 
+                <form action="../controladores/ClienteController.php" method="post"> 
                 <div class="mb-3">
                     <label for="dni" class="form-label">DNI</label>
                     <input type="text" class="form-control" id="dni" name="dni_c">
