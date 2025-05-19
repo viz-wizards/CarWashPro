@@ -279,9 +279,26 @@ body {
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+.tabla-rojo{
+  background-color: #000000 !important;
+}
 
+.border-red {
+  border: 2.5px solid #dc3545;
+  padding: 30px;
+  padding-top: 7dvh;
+}
 
 /* === AZUL === */
+
+.border-blue {
+  margin-top : 3dvh;
+  border: 2.5px solid #dc3545;
+  padding: 30px;
+  padding-top: 7dvh;
+
+}
+
 .text-blue {
   color: #0d6efd !important; /* Bootstrap azul */
 }
@@ -303,6 +320,14 @@ body {
 
 
 /* === BLANCO === */
+.border-white {
+  margin-top : 3dvh;
+  border: 2.5px solid #dc3545;
+  padding: 30px;
+  padding-top: 7dvh;
+
+}
+
 .border-white-bg {
   border: 2px solid #ffffff !important;
 }
@@ -326,6 +351,15 @@ body {
 
 
 /* === VIOLETA === */
+.border-violet {
+  margin-top : 3dvh;
+  border: 2.5px solid #dc3545;
+  padding: 30px;
+  padding-top: 7dvh;
+
+}
+
+
 .text-violet {
   color: #8e44ad !important;
 }
@@ -345,13 +379,20 @@ body {
   color: white !important;
 }
 
+.mt-custom {
+  margin-top: 2.8rem; 
+}
+
+
 .btn-violet:hover {
   background-color: #732d91 !important;
   border-color: #5b2373 !important;
 }
 
-
-
+/*Fondo de todos los cuadros*/
+.p-3{
+  background-color: #141414;
+}
 
 
 
