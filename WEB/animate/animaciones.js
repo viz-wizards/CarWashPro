@@ -79,3 +79,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if (c.element) observer.observe(c.element);
   });
 });
+
+
+
+// apara ocultar el navbar
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function () {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    // Scroll hacia abajo => ocultar navbar
+    navbar.style.top = '-80px'; // ajusta este valor según la altura de tu navbar
+  } else {
+    // Scroll hacia arriba => mostrar navbar
+    navbar.style.top = '0';
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});

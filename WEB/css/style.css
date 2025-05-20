@@ -14,12 +14,22 @@ body {
   background-color: #0d0d0d;
   color: #ffffff;
   margin: 0;
-  padding: 0;
+  padding-top: var(--bs-navbar-height, 83px);
 }
  
 .navbar {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.813) !important; 
   padding: 0.7rem 2rem;
+  transition: background-color 0.3s ease !important;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: top 0.4s ease-in-out !important;
+}
+
+.navbar.hide-navbar {
+  top: -100px !important; /* Asegúrate de que esto sea mayor o igual a la altura real del navbar */
 }
 
 .navbar-brand img {
