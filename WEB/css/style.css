@@ -185,14 +185,8 @@ body {
 }
 
 .ceramic-section {
-  background: linear-gradient(
-    90deg,
-    rgb(221, 14, 14) 0%,
-    rgb(228, 10, 24) 45%,
-    rgba(0, 0, 0, 1) 58%,
-    rgba(0, 0, 0, 1) 99%
-  );
-  color: #fff;
+  background: linear-gradient(90deg,rgba(221, 14, 14, 1) 0%, rgba(221, 14, 14, 0.9) 28%,
+   rgba(228, 10, 24, 0.8) 41%, rgba(15, 15, 23, 0.8) 55%, rgba(11, 11, 16, 0.9) 68%, rgba(0, 0, 0, 1) 99%);
   padding: 4rem 2rem;
   min-height: 100vh;
   display: flex;
@@ -211,6 +205,36 @@ body {
   line-height: 1.6;
   margin-bottom: 2rem;
 }
+
+.img-ceramico {
+  width: 100%;
+  max-height: 500px;
+  max-width: 700px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.descripcion-imagen {
+  margin-top: 15px;
+  padding-right: 200px;
+  padding-bottom: 30px;
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: #726f6f;
+}
+
+@media (max-width: 768px) {
+  .img-ceramico {
+    max-height: 250px;
+  }
+
+  .descripcion-imagen {
+    font-size: 0.95rem;
+    text-align: start;
+    padding-left: 150px;
+  }
+}
+
 
 .feature-box {
   background-color: rgba(255, 255, 255, 0.05);
@@ -282,6 +306,8 @@ body {
     font-size: 1rem;
   }
 }
+
+
 
 /*============= SECCION PAQUETES =========================*/
  /* ROJO */
@@ -547,4 +573,24 @@ body {
   text-align: center;
   font-size: 0.9em;
   color: #aaa;
+}
+
+
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* SOLO en móviles: mostrar 2 columnas por fila */
+@media (max-width: 767px) {
+  .footer-column {
+    flex: 0 0 48%;
+  }
 }
