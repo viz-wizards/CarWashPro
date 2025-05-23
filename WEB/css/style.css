@@ -129,6 +129,12 @@ body {
   }
 }
 
+.card-img-top {
+  height: 246px; /* o el valor que prefieras */
+  object-fit: cover;
+  
+}
+
 .mt-5 {
   padding-left: 5ch;
   margin-top: 5rem !important;

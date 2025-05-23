@@ -8,8 +8,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-CREATE DATABASE Carwash;
-use Carwash;
+/*CREATE DATABASE Carwash_db;*/
+use Carwash_db;
 
 CREATE TABLE `tb_categoria` (
   `id_categoria` int(11) NOT NULL,
