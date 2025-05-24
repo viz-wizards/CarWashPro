@@ -18,6 +18,7 @@ if (isset($_SESSION["usuario_sesion"])) {
     <link rel="stylesheet" href="views/assets/css/login.css">
     <!-- Poner icono -->
     <link rel="shortcut icon" href="#" type="image/x-icon"> 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <form action="controllers/UserController.php" method="POST" style="border:1px solid;">
@@ -27,9 +28,12 @@ if (isset($_SESSION["usuario_sesion"])) {
             <input type="text" name="user" placeholder="Escribe tu usuario">
             <label for="pass">Contraseña</label>
             <input type="password" name="pass" placeholder="Escribe tu contraseña">
+            <div class="g-recaptcha" data-sitekey="6LfpykArAAAAAGuP7UlfmGPhXqMSOU65MuavTjmg"></div>
             <input type="submit" value="Iniciar Sesión">
         </fieldset>
     </form>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 </body>
 
