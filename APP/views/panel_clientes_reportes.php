@@ -104,15 +104,7 @@
       
       
       <!-- Modal Editar cliente -->
-      <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">Modal Editar Cliente</h4>
-            </div>
-            <div class="modal-body text-left">
-            <!--  INICIO DE FORMULARIO -->
+      <           <!--  INICIO DE FORMULARIO -->
                 <form action="#" method="post"> 
                   <div class="mb-3">
                       <label for="dni" class="form-label">DNI</label>
@@ -140,7 +132,15 @@
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->      
+      </div><!-- /.modal -->  div class="modal fade" id="modalEditar" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Modal Editar Cliente</h4>
+            </div>
+            <div class="modal-body text-left">
+     
       
       <!-- Footer -->
       <?php require_once("default/footer.php");?>
