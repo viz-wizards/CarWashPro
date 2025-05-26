@@ -1,36 +1,43 @@
 <?php
-//requerir la clase model/usuario.php
 require_once '../models/Usuario.php';
-//Creamos un objeto (obj)
-$obj = new Usuario();
-//Llamos al metodo del OBJETO CREADO
-$resultado = $obj->getLoginUsuario();
-//Almacenar dentro de una variable
+
+// Validar reCAPTCHA
+if (!isset($_POST['g-recaptcha-response'])) {
+    die('Por favor completa el reCAPTCHA');
+}
+
+$captcha = $_POST['g-recaptcha-response'];
+$secretKey = '6Lei8EkrAAAAAHot9TjshXrt7t3B-Ghd5pFG5lM4'; 
+
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha");
+$responseKeys = json_decode($response, true);
+
+if (!$responseKeys["success"]) {
+    die('Error en la verificación reCAPTCHA. Intenta de nuevo.');
+}
+
+// Obtener usuario y contraseña
 $user = trim($_POST["user"]);
 $clave = trim($_POST["pass"]);
-//Creamos variables nuevas
+
+// Validar usuario
+$obj = new Usuario();
+$resultado = $obj->getLoginUsuario();
 $encontrados = 0;
-//Ejecutamos el metodo getLoginUsuario
-while($fila=$resultado->fetch_array(MYSQLI_ASSOC)){
-    //print_r($fila); //Monstramos los resultados
-    if($fila['usuario'] == $user && $fila['password'] == $clave)
-    {   
-        //Activamos el sesion storage
+
+while($fila = $resultado->fetch_array(MYSQLI_ASSOC)) {
+    if($fila['usuario'] == $user && $fila['password'] == $clave) {
         session_start(); 
-        //almacenamos informacion del usuario en el sesion storage
-        $_SESSION["usuario_sesion"]=$fila; 
+        $_SESSION["usuario_sesion"] = $fila; 
         $encontrados = 1;
         break;
-    }else{
-        $encontrados = 0;
     }
 }
 
-//Validamos
-if($encontrados){
-    // echo "¡Hola bienvenido!";
-    header('Location: ../views/dashboard.php'); //Redireccionamiento al panel administrativo
-}else{
-    header('Location: ../index.php'); //Redireccionamiento al login
-    // echo "Usuario Incorrecto";
+if($encontrados) {
+    header('Location: ../views/dashboard.php');
+    exit;
+} else {
+    header('Location: ../index.php');
+    exit;
 }
