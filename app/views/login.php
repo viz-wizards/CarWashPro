@@ -28,6 +28,7 @@ if (isset($_SESSION["usuario_sesion"])) {
             <label for="pass">Contraseña</label>
             <input type="password" name="pass" placeholder="Escribe tu contraseña" required>
 
+            <input type="checkbox" onclick="pass.type =this. checked ? 'text' : 'password'">
             <!-- reCAPTCHA -->
             <div class="g-recaptcha" data-sitekey="6Lei8EkrAAAAAD7vv-YK22L5U-oZTivGPjrndBmQ"></div>
 
