@@ -329,6 +329,7 @@ body {
   border: 2.5px solid #dc3545;
   padding: 30px;
   padding-top: 7dvh;
+  background-color: #070707 !important;
 }
 
 /* === AZUL === */
@@ -338,7 +339,7 @@ body {
   border: 2.5px solid #dc3545;
   padding: 30px;
   padding-top: 7dvh;
-
+  background-color: #070707 !important;
 }
 
 .text-blue {
@@ -367,6 +368,7 @@ body {
   border: 2.5px solid #dc3545;
   padding: 30px;
   padding-top: 7dvh;
+  background-color: #070707 !important;
 
 }
 
@@ -398,7 +400,7 @@ body {
   border: 2.5px solid #dc3545;
   padding: 30px;
   padding-top: 7dvh;
-
+  background-color: #070707 !important;
 }
 
 
@@ -433,7 +435,7 @@ body {
 
 /*Fondo de todos los cuadros*/
 .p-3{
-  background-color: #141414;
+  background-color: #141414 !important;
 }
 
 
